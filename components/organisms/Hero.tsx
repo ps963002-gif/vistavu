@@ -13,7 +13,7 @@ export default function Hero() {
             <div className="w-1/2 flex items-center">
               <div className="pl-24">
 
-                <h1 className="text-white text-[3.5rem] leading-[4.125rem] font-bold max-w-[35rem]">
+                <h1 className="text-white text-[3.5rem] leading-[4rem] font-bold max-w-[35rem]">
                   Innovate today,
                   run great
                   tomorrow.
@@ -47,8 +47,6 @@ export default function Hero() {
       className="object-cover"
     />
   </div>
-
-  {/* Slider Indicators */}
   <div className="mt-6 flex items-center gap-3">
     <span className="h-4 w-4 rounded-full border-[3px] border-[#2D8CFF] bg-white"></span>
 

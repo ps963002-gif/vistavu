@@ -5,7 +5,7 @@ import {
   Settings,
   Bot,
   Network,
-  ChartColumn,
+ ChartColumn,
   Workflow,
   ArrowRight,
 } from "lucide-react";
@@ -72,7 +72,7 @@ export default function BusinessNeeds() {
   return (
     <section className="bg-[#F6F8FB] py-24">
       <div className="mx-auto max-w-[1180px] px-4">
-
+     
         <div className="mb-14">
           <h5 className="inline-block border-b-2 border-[#2F80ED] pb-1 text-[13px] font-bold uppercase tracking-[3px] text-[#2F80ED]">
             Business Needs
@@ -83,44 +83,42 @@ export default function BusinessNeeds() {
           </h2>
         </div>
 
-  
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-  {cards.map((card, index) => {
-    const Icon = card.icon;
+    
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {cards.map((card, index) => {
+            const Icon = card.icon;
 
-    return (
-      <div
-        key={index}
-        className={`${card.color} rounded-2xl p-7 min-h-[290px] text-white flex flex-col shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
-      >
+            return (
+              <div
+                key={index}
+                className={`${card.color} flex min-h-[300px] flex-col rounded-2xl p-8 text-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+              >
+            
+                <Icon
+                  size={40}
+                  strokeWidth={2}
+                  className="mb-6 text-white"
+                />
 
-        <Icon
-          size={30}
-          strokeWidth={1.8}
-          className="text-white mb-6"
-        />
+          
+                <h3 className="text-[18px] font-bold leading-[24px]">
+                  {card.title}
+                </h3>
 
-       
-        <h3 className="text-[18px] font-semibold leading-[28px]">
-          {card.title}
-        </h3>
+            
+                <p className="mt-4 flex-grow text-[15px] leading-[22px] text-white/90">
+                  {card.description}
+                </p>
 
-       
-        <p className="mt-3 text-[15px] leading-[30px] text-white/90 flex-grow">
-          {card.description}
-        </p>
-
-        <button className="mt-auto pt-5 flex items-center gap-2 text-[16px] font-semibold hover:gap-3 transition-all">
-          Learn more
-          <ArrowRight
-            size={18}
-            strokeWidth={2}
-          />
-        </button>
-      </div>
-    );
-  })}
-</div>
+            
+                <button className="mt-6 flex items-center gap-2 text-[16px] font-semibold transition-all hover:gap-3">
+                  Learn more
+                  <ArrowRight size={18} strokeWidth={2.5} />
+                </button>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

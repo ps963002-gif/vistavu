@@ -25,3 +25,34 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.industriesSwiper {
+  padding-bottom: 80px;
+}
+
+.industriesSwiper .swiper-button-prev,
+.industriesSwiper .swiper-button-next {
+  width: 48px;
+  height: 48px;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  color: #2d8cff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  top: auto;
+  bottom: 0;
+}
+
+.industriesSwiper .swiper-button-prev {
+  left: auto;
+  right: 70px;
+}
+
+.industriesSwiper .swiper-button-next {
+  right: 10px;
+}
+
+.industriesSwiper .swiper-button-prev::after,
+.industriesSwiper .swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}

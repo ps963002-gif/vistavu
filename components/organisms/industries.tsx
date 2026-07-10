@@ -52,24 +52,37 @@ export default function Industries() {
         </div>
 
         <div className="mt-14">
+<Swiper
+  modules={[Navigation]}
+  navigation={{
+    prevEl: ".industries-prev",
+    nextEl: ".industries-next",
+  }}
+  loop
+  grabCursor
+  spaceBetween={24}
+  slidesPerView={2}
+  breakpoints={{
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 2,
+    },
+  }}
+>
+  <div className="mt-8 flex justify-end gap-4">
+  <button className="industries-prev flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-white text-[#2D8CFF] shadow transition hover:bg-[#2D8CFF] hover:text-white">
+    ←
+  </button>
 
-          <Swiper
-            modules={[Navigation]}
-            navigation
-            spaceBetween={24}
-            slidesPerView={3}
-            breakpoints={{
-              0: {
-                slidesPerView: 1,
-              },
-              768: {
-                slidesPerView: 2,
-              },
-              1200: {
-                slidesPerView: 3,
-              },
-            }}
-          >
+  <button className="industries-next flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-white text-[#2D8CFF] shadow transition hover:bg-[#2D8CFF] hover:text-white">
+    →
+  </button>
+</div>
             {industries.map((industry) => (
               <SwiperSlide key={industry.title}>
                 <div className="overflow-hidden rounded-xl border border-[#ECECEC] bg-[#F8F9FB] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
