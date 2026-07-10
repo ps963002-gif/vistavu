@@ -14,16 +14,16 @@ export default function Footer() {
         <div className="mx-auto flex max-w-[80rem] flex-col gap-[3rem] px-[2rem] py-[4rem] lg:flex-row lg:justify-between">
           <div className="max-w-[24rem]">
             <div className="mb-[2rem]">
-              <Image
-                src="/logos/vistavulogo.jpg"
-                alt="VistaVu Logo"
-                width={220}
-                height={70}
-                className="h-auto w-[13rem]"
-                priority
+             <Image
+  src="/images/footerlogo.png"
+  alt="VistaVu Logo"
+  width={380}
+  height={130}
+  className="h-auto w-[18rem] lg:w-[20rem]"
+  priority
+
               />
             </div>
-
             <p className="text-[1rem] leading-[1.8rem] text-gray-600">
               VistaVu creates solutions for your business. Innovative business
               solutions that drive growth and efficiency.
@@ -35,7 +35,7 @@ export default function Footer() {
                 1-888-300-2727
               </span>{" "}
               ext.
-              <span className="font-semibold text-[#2F80ED]"> 105</span>
+              <span className="font-semibold text-[#2F80ED]"> 105</span>v
             </p>
           </div>
           <div>
@@ -43,7 +43,7 @@ export default function Footer() {
               Company
             </h3>
 
-            <div className="flex flex-col gap-[1rem] text-gray-600">
+            <div className="flex flex-col gap-[0.5rem] text-gray-600">
               <Link href="#">About Us</Link>
               <Link href="#">Careers</Link>
               <Link href="#">Resources</Link>
@@ -54,7 +54,7 @@ export default function Footer() {
               Helpful Resources
             </h3>
 
-            <div className="flex flex-col gap-[1rem] text-gray-600">
+            <div className="flex flex-col gap-[0.5rem] text-gray-600">
               <Link href="#">Privacy Policy</Link>
               <Link href="#">Cookies</Link>
               <Link href="#">FAQs</Link>
@@ -66,7 +66,6 @@ export default function Footer() {
             <h3 className="mb-[1.5rem] text-[1.25rem] font-semibold">
               Follow Us
             </h3>
-
             <div className="flex gap-[1rem] text-[1.8rem] text-[#0B2B5B]">
               <FaYoutube className="cursor-pointer transition hover:text-[#2F80ED]" />
               <FaXTwitter className="cursor-pointer transition hover:text-[#2F80ED]" />
