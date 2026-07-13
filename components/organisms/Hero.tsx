@@ -37,7 +37,6 @@ export default function Hero() {
                   Innovate today,
                   <br />
                   run great
-                  <br />
                   tomorrow.
                 </h1>
 
