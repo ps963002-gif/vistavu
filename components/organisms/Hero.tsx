@@ -24,13 +24,13 @@ export default function Hero() {
 
   return (
     <>
-      {/* Hero Section */}
+
       <section className="relative w-full bg-[#F6F9FC] overflow-hidden">
         <div className="relative w-full h-[39rem]">
           <div className="absolute left-0 top-0 w-[58%] h-full bg-[#0D2D63]" />
 
           <div className="relative max-w-[90rem] mx-auto h-full flex">
-            {/* Left Side */}
+          
             <div className="w-1/2 flex items-center">
               <div className="pl-24">
                 <h1 className="text-white text-[3.5rem] leading-[4rem] font-bold max-w-[35rem]">
@@ -57,7 +57,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Right Side */}
+          
             <div className="w-1/2 flex flex-col items-center justify-center">
               <div className="relative w-[34rem] h-[24rem] rounded-xl overflow-hidden shadow-xl">
                 <Image
@@ -78,63 +78,59 @@ export default function Hero() {
           </div>
         </div>
       </section>
-            {/* Client Logos Slider */}
-      <section className="bg-[#F3F5F7] border-t border-[#E5E7EB] py-6">
-        <div className="max-w-[80rem] mx-auto px-8 flex items-center gap-4">
+        
+     <section className="bg-[#F3F5F7] border-t border-[#E5E7EB] py-6">
+  <div className="max-w-[80rem] mx-auto px-8 flex items-center gap-4">
 
-          {/* Left Arrow */}
-          <button className="custom-prev w-10 h-10 rounded-full border border-gray-300 bg-white flex items-center justify-center hover:bg-[#0D2D63] hover:text-white transition">
-            <FiChevronLeft size={20} />
-          </button>
 
-          <Swiper
-            modules={[Navigation]}
-            onBeforeInit={(swiper) => {
-              // @ts-ignore
-              swiper.params.navigation.prevEl = ".custom-prev";
-              // @ts-ignore
-              swiper.params.navigation.nextEl = ".custom-next";
-            }}
-            navigation
-            loop={true}
-            slidesPerView={4}
-            slidesPerGroup={1}
-            spaceBetween={40}
-            className="flex-1"
-            breakpoints={{
-              320: {
-                slidesPerView: 2,
-              },
-              640: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 4,
-              },
-            }}
-          >
-            {logos.map((logo, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex justify-center items-center h-16">
-                  <Image
-                    src={logo}
-                    alt={`Logo ${index + 1}`}
-                    width={140}
-                    height={60}
-                    className="object-contain"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+    <button className="custom-prev w-10 h-10 rounded-full border border-gray-300 bg-white flex items-center justify-center hover:bg-[#0D2D63] hover:text-white transition">
+      <FiChevronLeft size={20} />
+    </button>
 
-          {/* Right Arrow */}
-          <button className="custom-next w-10 h-10 rounded-full border border-gray-300 bg-white flex items-center justify-center hover:bg-[#0D2D63] hover:text-white transition">
-            <FiChevronRight size={20} />
-          </button>
+    <Swiper
+      modules={[Navigation]}
+      navigation={{
+        prevEl: ".custom-prev",
+        nextEl: ".custom-next",
+      }}
+      loop={true}
+      slidesPerView={4}
+      slidesPerGroup={1}
+      spaceBetween={40}
+      className="flex-1"
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+        },
+        640: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+      }}
+    >
+      {logos.map((logo, index) => (
+        <SwiperSlide key={index}>
+          <div className="flex justify-center items-center h-16">
+            <Image
+              src={logo}
+              alt={`Logo ${index + 1}`}
+              width={140}
+              height={60}
+              className="object-contain"
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
 
-        </div>
-      </section>
+    <button className="custom-next w-10 h-10 rounded-full border border-gray-300 bg-white flex items-center justify-center hover:bg-[#0D2D63] hover:text-white transition">
+      <FiChevronRight size={20} />
+    </button>
+
+  </div>
+</section>
     </>
   );
 }
