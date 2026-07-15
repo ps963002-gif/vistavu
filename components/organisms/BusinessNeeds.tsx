@@ -1,3 +1,5 @@
+"use client";
+
 import {
   BarChart3,
   Lightbulb,
@@ -5,7 +7,7 @@ import {
   Settings,
   Bot,
   Network,
- ChartColumn,
+  ChartColumn,
   Workflow,
   ArrowRight,
 } from "lucide-react";
@@ -72,18 +74,18 @@ export default function BusinessNeeds() {
   return (
     <section className="bg-[#F6F8FB] py-24">
       <div className="mx-auto max-w-[1180px] px-4">
-     
         <div className="mb-14">
-          <h5 className="inline-block border-b-2 border-[#2F80ED] pb-1 text-[13px] font-bold uppercase tracking-[3px] text-[#2F80ED]">
-            Business Needs
+          <h5 className="inline-block border-b border-[#2F80ED] pb-[1px] text-[21px] font-semibold uppercase tracking-[0.24em] text-[#2F80ED]">
+            BUSINESS NEEDS
           </h5>
 
-          <h2 className="mt-4 max-w-[560px] text-[56px] font-light leading-[64px] text-[#222]">
-            Capabilities of Smarter Operations
+          <h2 className="mt-5 max-w-[560px] text-[62px] font-normal leading-[60px] tracking-[-0.045em] text-[#222222]">
+            Capabilities of
+            <br />
+            Smarter Operations
           </h2>
         </div>
 
-    
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card, index) => {
             const Icon = card.icon;
@@ -91,29 +93,28 @@ export default function BusinessNeeds() {
             return (
               <div
                 key={index}
-                className={`${card.color} flex min-h-[300px] flex-col rounded-2xl p-8 text-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl`}
+                className={`${card.color} flex min-h-[300px] flex-col rounded-2xl p-8 text-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl`}
               >
-            
                 <Icon
-                  size={40}
+                  size={36}
                   strokeWidth={2}
                   className="mb-6 text-white"
                 />
 
-          
-                <h3 className="text-[18px] font-bold leading-[24px]">
+                <h3 className="text-[23px] font-bold leading-[30px] tracking-[-0.02em]">
                   {card.title}
                 </h3>
 
-            
-                <p className="mt-4 flex-grow text-[15px] leading-[22px] text-white/90">
+                <p className="mt-2 flex-grow text-[16px] leading-[27px] text-white/90">
                   {card.description}
                 </p>
-
-            
-                <button className="mt-6 flex items-center gap-2 text-[16px] font-semibold transition-all hover:gap-3">
+                                <button className="mt-6 flex items-center gap-2 text-[15px] font-semibold text-white transition-all hover:gap-3">
                   Learn more
-                  <ArrowRight size={18} strokeWidth={2.5} />
+                  <ArrowRight
+                    size={18}
+                    strokeWidth={2.3}
+                    className="mt-[1px]"
+                  />
                 </button>
               </div>
             );

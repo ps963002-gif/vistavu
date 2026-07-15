@@ -29,65 +29,66 @@ export default function Industries() {
     },
   ];
 
+  const sliderData = [...industries, ...industries];
+
   return (
     <section className="bg-white py-24">
-      <div className="max-w-[80rem] mx-auto px-8">
+      <div className="mx-auto max-w-[1280px] px-10">
 
-        <div className="max-w-[42rem]">
+        {/* Heading */}
+        <div className="max-w-[640px]">
 
-          <h5 className="inline-block border-b-2 border-[#2D8CFF] pb-1 text-xs font-bold uppercase tracking-[3px] text-[#2D8CFF]">
-            Industries
+          <h5 className="inline-block border-b border-[#2D8CFF] pb-[2px] text-[19px] font-semibold uppercase tracking-[0.22em] text-[#2D8CFF]">
+            INDUSTRIES
           </h5>
 
-          <h2 className="mt-5 text-[3rem] leading-[3.4rem] font-bold text-[#202020]">
-            Purpose-built solutions for your industry
+          <h2 className="mt-4 text-[58px] font-bold leading-[60px] tracking-[-0.045em] text-[#222222]">
+            Purpose-built solutions
+            <br />
+            for your industry
           </h2>
 
-          <p className="mt-6 text-[17px] leading-8 text-[#666]">
+          <p className="mt-6 max-w-[560px] text-[19px] leading-[2.05rem] text-[#666666]">
             We work with mid-market leaders in industries where precision,
             efficiency, and visibility aren't optional. Our solutions are built
-            to match the complexity of your operations with the speed and
-            scalability of cloud ERP and deep industry expertise.
+            to match the complexity of your operations, with the speed and
+            scalability of cloud ERP and the deep industry knowledge to get it
+            right the first time.
           </p>
         </div>
 
-        <div className="mt-14">
-<Swiper
-  modules={[Navigation]}
-  navigation={{
-    prevEl: ".industries-prev",
-    nextEl: ".industries-next",
-  }}
-  loop
-  grabCursor
-  spaceBetween={24}
-  slidesPerView={2}
-  breakpoints={{
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1200: {
-      slidesPerView: 2,
-    },
-  }}
->
-  <div className="mt-8 flex justify-end gap-4">
-  <button className="industries-prev flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-white text-[#2D8CFF] shadow transition hover:bg-[#2D8CFF] hover:text-white">
-    ←
-  </button>
+        {/* Cards */}
+        <div className="relative mt-16">
 
-  <button className="industries-next flex h-12 w-12 items-center justify-center rounded-full border border-gray-300 bg-white text-[#2D8CFF] shadow transition hover:bg-[#2D8CFF] hover:text-white">
-    →
-  </button>
-</div>
-            {industries.map((industry) => (
-              <SwiperSlide key={industry.title}>
-                <div className="overflow-hidden rounded-xl border border-[#ECECEC] bg-[#F8F9FB] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <Swiper
+            modules={[Navigation]}
+            navigation={{
+              prevEl: ".industries-prev",
+              nextEl: ".industries-next",
+            }}
+            loop
+            speed={700}
+            grabCursor
+            slidesPerView={3}
+            spaceBetween={24}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            {sliderData.map((industry, index) => (
+              <SwiperSlide key={index}>
+                <div className="overflow-hidden rounded-xl border border-[#E8E8E8] bg-white shadow-sm">
 
-                  <div className="relative h-[250px] w-full">
+                  {/* Image */}
+                  <div className="relative h-[195px] w-full">
                     <Image
                       src={industry.image}
                       alt={industry.title}
@@ -96,29 +97,38 @@ export default function Industries() {
                     />
                   </div>
 
-                  <div className="p-6">
+                  {/* Content */}
+                  <div className="flex h-[209px] flex-col px-7 pt-6 pb-6">
 
-                    <h3 className="text-[30px] font-semibold text-[#202020]">
+                    <h3 className="text-[21px] font-bold leading-[24px] tracking-[-0.03em] text-[#222222]">
                       {industry.title}
                     </h3>
 
-                    <p className="mt-4 text-[16px] leading-8 text-[#666]">
+                    <p className="mt-3 flex-1 text-[15px] leading-[24px] text-[#666666]">
                       {industry.description}
                     </p>
-
-                    <button className="mt-8 text-[15px] font-semibold text-[#2D8CFF] hover:underline">
-                      Learn more →
+                                        <button className="mt-auto flex items-center gap-2 text-[15px] font-semibold text-[#2D8CFF] transition-all duration-300 hover:gap-3">
+                      Learn more
+                      <span className="text-lg">→</span>
                     </button>
 
                   </div>
-
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
 
-        </div>
+          {/* Navigation Buttons */}
+          <div className="mt-10 flex justify-end gap-4">
+            <button className="industries-prev flex h-11 w-11 items-center justify-center rounded-full border border-[#D9D9D9] bg-white text-[#2D8CFF] shadow-sm transition-all hover:bg-[#2D8CFF] hover:text-white">
+              ←
+            </button>
 
+            <button className="industries-next flex h-11 w-11 items-center justify-center rounded-full bg-[#2D8CFF] text-white shadow-sm transition-all hover:bg-[#1E74E8]">
+              →
+            </button>
+          </div>
+                  </div>
       </div>
     </section>
   );
