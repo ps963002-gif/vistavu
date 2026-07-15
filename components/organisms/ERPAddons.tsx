@@ -99,7 +99,7 @@ export default function ERPAddons() {
                       {item.title}
                     </h3>
 
-                    <p className="mt-4 flex-1 text-[16px] leading-8 text-[#666666] transition-colors duration-300 group-hover:text-white/80">
+                    <p className="mt-4 flex-1 text-[16px] leading-6 text-[#666666] transition-colors duration-300 group-hover:text-white/80">
                       {item.title} enhances your ERP with tools for
                       inventory visibility, warehouse control, and
                       planning. Designed for distributors who need
