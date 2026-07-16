@@ -38,7 +38,7 @@ export default function Industries() {
         {/* Heading */}
         <div className="max-w-[640px]">
 
-          <h5 className="inline-block border-b border-[#2D8CFF] pb-[2px] text-[19px] font-semibold uppercase tracking-[0.22em] text-[#2D8CFF]">
+          <h5 className="inline-block border-b border-[#2D8CFF] pb-[2px] text-[19px] font-semibold uppercase tracking-[0em] text-[#2D8CFF]">
             INDUSTRIES
           </h5>
 
@@ -48,7 +48,7 @@ export default function Industries() {
             for your industry
           </h2>
 
-          <p className="mt-6 max-w-[560px] text-[19px] leading-[2.05rem] text-[#666666]">
+          <p className="mt-3 max-w-[560px] text-[19px] leading-[2.0rem] text-[#666666]">
             We work with mid-market leaders in industries where precision,
             efficiency, and visibility aren't optional. Our solutions are built
             to match the complexity of your operations, with the speed and

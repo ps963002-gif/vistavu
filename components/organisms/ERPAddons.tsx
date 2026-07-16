@@ -30,7 +30,7 @@ export default function ERPAddons() {
 
         {/* Left Content */}
         <div className="max-w-[560px]">
-          <p className="inline-block border-b-2 border-[#2E6BFF] pb-1 text-[19px] font-bold uppercase tracking-[1px] text-[#2E6BFF]">
+          <p className="inline-block border-b-2 border-[#2E6BFF] pb-1 text-[19px] font-bold uppercase tracking-[0px] text-[#2E6BFF]">
             ERP ADDONS
           </p>
 
@@ -81,7 +81,6 @@ export default function ERPAddons() {
             {addons.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="group flex min-h-[580px] flex-col overflow-hidden rounded-xl bg-white shadow-md transition-all duration-300 hover:-translate-y-2 hover:bg-[#102A56] hover:shadow-xl">
-
                   {/* Image */}
                   <div className="relative h-[220px] w-full">
                     <Image

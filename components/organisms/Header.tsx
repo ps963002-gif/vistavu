@@ -10,10 +10,10 @@ export default function Header() {
           src="/logos/vistavulogo.jpg"
           alt="VistaVu"
           width={160}
-          height={48}
+          height={32}
           priority
         />
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-8">
           <nav>
             <ul className="flex items-center gap-10 text-[17px] font-medium text-[#222]">
               <li className="cursor-pointer hover:text-[#2D8CFF] transition">

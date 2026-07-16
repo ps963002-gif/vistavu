@@ -31,21 +31,20 @@ export default function Hero() {
     <>
       
       <section className="relative w-full bg-[#F6F9FC] overflow-hidden">
-        <div className="relative w-full h-[39rem]">
+        <div className="relative w-full h-[35rem]">
           
-          <div className="absolute left-0 top-0 w-[58%] h-full bg-[#0D2D63]" />
+          <div className="absolute left-0 top-0 w-[55%] h-full bg-[#0a224a]" />
 
           <div className="relative max-w-[90rem] mx-auto h-full flex">
             
-            <div className="w-1/2 flex items-center">
-              <div className="pl-24">
+            <div className="w-1/2.5 flex items-center">
+              <div className="pl-28">
                 <h1 className="text-white text-[3.5rem] leading-[4rem] font-bold max-w-[35rem]">
                   Innovate today,
                   <br />
                   run great tomorrow.
                 </h1>
-
-                <p className="mt-10 text-white/90 text-[1.25rem] leading-8 max-w-[32.5rem]">
+                <p className="mt-5 text-white/90 text-[1.25rem] leading-6 max-w-[32.5rem]">
                   Tailored to meet diverse business needs, we provide
                   solutions that empower businesses to optimize
                   processes, drive productivity, and elevate operations.
@@ -76,11 +75,12 @@ export default function Hero() {
                   clickable: true,
                   el: ".hero-pagination",
                 }}
-                className="w-[34rem] h-[24rem] rounded-xl overflow-hidden shadow-xl"
+                className="w-[40rem] h-[25rem] rounded-xl overflow-hidden shadow-xl"
               >
+                
                 {heroImages.map((image, index) => (
                   <SwiperSlide key={index}>
-                    <div className="relative w-full h-[24rem]">
+                    <div className="relative w-full h-[25rem]">
                       <Image
                         src={image}
                         alt={`Hero ${index + 1}`}
@@ -92,7 +92,9 @@ export default function Hero() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <div className="hero-pagination mt-6 flex justify-center"></div>
+              <div className="w-[42rem] flex justify-evenly mt-3 pr-8">
+  <div className="hero-pagination"></div>
+</div>
             </div>
           </div>
         </div>

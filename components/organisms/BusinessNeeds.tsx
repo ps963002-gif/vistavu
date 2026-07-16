@@ -75,7 +75,7 @@ export default function BusinessNeeds() {
     <section className="bg-[#F6F8FB] py-24">
       <div className="mx-auto max-w-[1180px] px-4">
         <div className="mb-14">
-          <h5 className="inline-block border-b border-[#2F80ED] pb-[1px] text-[21px] font-semibold uppercase tracking-[0.24em] text-[#2F80ED]">
+          <h5 className="inline-block border-b border-[#2F80ED] pb-[1px] text-[21px] font-semibold uppercase tracking-[0em] text-[#2F80ED]">
             BUSINESS NEEDS
           </h5>
 
